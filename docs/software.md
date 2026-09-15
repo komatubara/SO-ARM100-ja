@@ -1,88 +1,132 @@
 ---
-title: ソフトウェア
-eyebrow: LeRobot
-lead: ハードウェアが組めたら、Feetech バスサーボを LeRobot から見えるようにします。Linux では USB 権限、Windows / macOS ではポート名の確認が最初の関門です。
+title: LeRobot の導入
+eyebrow: Hugging Face チュートリアル
+lead: Hugging Face のインストールガイドを、SO-101 で使う範囲に絞って日本語にしたものです。Python 3.12 以上、PyTorch 2.10 以上が前提です。
 ---
 
-一次情報: [SO-101 ガイド](https://huggingface.co/docs/lerobot/so101) と [LeRobot のインストール](https://huggingface.co/docs/lerobot/installation)
+<p class="source-note">非公式訳です。原本は <a href="https://huggingface.co/docs/lerobot/installation">huggingface.co/docs/lerobot/installation</a>。環境構築の細部は原本の方が新しいことがあります。</p>
 
-## インストール
+公式は `conda`（miniforge）を推奨しています。`uv` や `venv` でも構いません。Python >= 3.12 と PyTorch >= 2.10 を満たしたら、手順 2 の環境作成へ進んでください。
 
-LeRobot 本体に加え、Feetech 用の追加依存が必要です。
-
-```bash
-pip install -e ".[feetech]"
-```
-
-仮想環境（conda や uv）に入れるのが無難です。CUDA が要るのは学習時で、モーター設定とデータ収集だけなら CPU でも進められます。
-
-## USB ポートを特定する
-
-制御ボードを USB と電源に繋ぎ、次を実行します。
+## 手順 1（conda のとき）: miniforge を入れる
 
 ```bash
-lerobot-find-port
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-指示どおり、調べたい方のアームの USB を抜いて Enter します。残った／消えたポートがそのアームです。
+## 手順 2: 仮想環境
 
-例（macOS）:
-
-```text
-The port of this MotorsBus is /dev/tty.usbmodem575E0032081
-```
-
-例（Linux）:
-
-```text
-The port of this MotorsBus is /dev/ttyACM1
-```
-
-Linux では権限が足りないと開けません。
+Python 3.12 の環境を作ります。
 
 ```bash
-sudo chmod 666 /dev/ttyACM0
-sudo chmod 666 /dev/ttyACM1
+conda create -y -n lerobot python=3.12
+conda activate lerobot
 ```
 
-恒久化するなら `udev` ルールを追加します。接続のたびに chmod するのは忘れやすいです。
-
-## モーター ID とボーレート
-
-新品サーボの ID はだいたい `1` です。バス上で一意でないと通信できません。ボーレートもボードと全モーターで揃えます。EEPROM に書くので、基本は一度だけです。別ロボットから流用したモーターも、ここをやり直します。
-
-**一度に 1 モーターだけ** をボードへ繋ぎます。デイジーチェーンしないこと。
-
-### フォロワー
+`uv` の場合:
 
 ```bash
-lerobot-setup-motors \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0
+uv python install 3.12
+uv venv --python 3.12
+# Linux / macOS
+source .venv/bin/activate
+# Windows PowerShell
+# .venv\Scripts\activate
 ```
 
-スクリプトが「gripper だけ繋げ」から順に指示します。公式の順番は先端（ID 6）から土台（ID 1）へ戻る形です。成功すると例えば次のように出ます。
+シェルを開くたびに activate が必要です。
 
-```text
-'gripper' motor id set to 6
-```
-
-次は `wrist_roll` だけ、と続きます。ケーブルはモーター側に残し、ボード側だけ差し替えても構いません。
-
-### リーダー
+WSL では `evdev` も入れてください。
 
 ```bash
-lerobot-setup-motors \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1
+# conda
+conda install evdev -c conda-forge
+# uv
+sudo apt install libevdev-dev
+uv pip install evdev
 ```
 
-全部終わったら、モーター同士を 3 ピンで数珠つなぎし、ID 1（shoulder pan）からボードへ戻します。
+### ffmpeg（動画デコード）
 
-## うまくいかないとき
+LeRobot は既定で [TorchCodec](https://github.com/meta-pytorch/torchcodec) を使い、`ffmpeg` が必要です。
 
-- 電源、USB、3 ピンの 3 本が実際に刺さっているか
-- Waveshare ならジャンパが USB の `B` 側か
-- 操作中に電源プラグが抜けていないか（公式も注意書きあり）
+TorchCodec が使えない環境（macOS Intel、Linux ARM、PyTorch < 2.8 の Windows）では自動で `pyav` に落ちるので、ffmpeg は飛ばして手順 3 へ進んで構いません。
 
-Windows での単体デバッグには [Feetech 公式ソフト](https://www.feetechrc.com/software.html)、Ubuntu には [FT_SCServo_Debug_Qt](https://github.com/Kotakku/FT_SCServo_Debug_Qt) もあります。LeRobot だけでも設定はできます。
+使える環境では、conda に入れる方法がどの PyTorch でも動きます。**PyTorch < 2.10 では必須**です。
+
+```bash
+conda install ffmpeg -c conda-forge
+```
+
+`libsvtav1` が無い、`torchcodec` とバージョンが合わない、といったときは:
+
+```bash
+conda install ffmpeg=7.1.1 -c conda-forge
+```
+
+PyTorch >= 2.10（TorchCodec ≥ 0.10）なら、システムの ffmpeg を動的リンクできます。
+
+```bash
+# Ubuntu / Debian
+sudo apt install ffmpeg
+# macOS Apple Silicon
+brew install ffmpeg
+```
+
+システムの ffmpeg は **PyTorch >= 2.10 だけ** です。古い PyTorch は conda の ffmpeg を使います。
+
+## 手順 3: LeRobot を入れる
+
+本体は軽量で、重い依存は extras に分かれています。
+
+### ソースから（推奨）
+
+```bash
+git clone https://github.com/huggingface/lerobot.git
+cd lerobot
+pip install -e ".[core_scripts]"  # 記録・再生・校正
+pip install -e ".[training]"      # 学習
+pip install -e ".[feetech]"       # SO-101 のモーター
+```
+
+全部入れるなら `pip install -e ".[all]"`。`uv` なら `uv pip install -e ".[core_scripts]"` のように置き換えます。
+
+### PyPI から
+
+```bash
+pip install 'lerobot[core_scripts,feetech]'
+pip install 'lerobot[training]'
+```
+
+| extra | 入るもの | 用途 |
+| --- | --- | --- |
+| `dataset` | datasets, av, torchcodec, jsonlines | データセット |
+| `training` | dataset + accelerate, wandb | 学習 |
+| `hardware` | pynput, pyserial, deepdiff | 実機接続 |
+| `viz` | rerun-sdk | 記録・評価の可視化 |
+| `core_scripts` | dataset + hardware + viz | record / replay / calibrate |
+| `feetech` | Feetech SDK | SO-100 / SO-101 / Moss |
+
+### CUDA（Linux）
+
+ソースを `uv` で入れると、プロジェクトは CUDA 12.8 の PyTorch（ドライバ下限 570.86）にピン止めされます。PyPI の既定 Linux ホイールは cu130 系（ドライバ下限 580.65）です。ドライバに合わせて変える例:
+
+```bash
+pip install --index-url https://download.pytorch.org/whl/cu128 torch torchvision
+pip install -e ".[all]"
+```
+
+### ビルドで落ちるとき
+
+Linux では次が必要になることがあります。
+
+```bash
+sudo apt-get install cmake build-essential python3-dev pkg-config \
+  libavformat-dev libavcodec-dev libavdevice-dev libavutil-dev \
+  libswscale-dev libswresample-dev libavfilter-dev
+```
+
+学習のログに Weights & Biases を使うなら `wandb login` します。`training` extra に含まれます。
+
+次は [組み立て]({{ '/assembly/' | relative_url }}) でモーター ID を振り、関節を組みます。

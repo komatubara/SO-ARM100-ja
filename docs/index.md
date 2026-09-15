@@ -32,19 +32,19 @@ lead: SO-101 は、自分で印刷・組み立てて、Hugging Face の LeRobot 
     <em>印刷する →</em>
   </a>
   <a class="card" href="{{ '/assembly/' | relative_url }}">
-    <strong>組み立て</strong>
-    <span>モーター配置、関節ごとの組み方、公式動画への案内。</span>
+    <strong>組み立て（本編）</strong>
+    <span>Hugging Face 公式ガイドの日本語訳。動画つきで関節ごとに組む。</span>
     <em>組む →</em>
   </a>
   <a class="card" href="{{ '/software/' | relative_url }}">
-    <strong>ソフトウェア</strong>
-    <span>LeRobot の導入、USB ポート、モーター ID 設定。</span>
-    <em>動かす →</em>
+    <strong>LeRobot 導入</strong>
+    <span>conda / pip、Feetech SDK、ffmpeg。</span>
+    <em>入れる →</em>
   </a>
-  <a class="card" href="{{ '/calibration/' | relative_url }}">
-    <strong>キャリブレーション</strong>
-    <span>標準の校正と、WebUI の 3 点校正。</span>
-    <em>合わせる →</em>
+  <a class="card" href="{{ '/train/' | relative_url }}">
+    <strong>データ収集と学習</strong>
+    <span>テレオペ、記録、ACT 学習、実機推論。</span>
+    <em>動かす →</em>
   </a>
 </div>
 
@@ -66,9 +66,10 @@ lead: SO-101 は、自分で印刷・組み立てて、Hugging Face の LeRobot 
 
 - [部品表と日本からの購入]({{ '/parts/' | relative_url }})
 - [印刷設定と外注]({{ '/printing/' | relative_url }})
-- [組み立ての要点]({{ '/assembly/' | relative_url }})
-- [LeRobot セットアップ]({{ '/software/' | relative_url }})
-- [校正]({{ '/calibration/' | relative_url }})
+- [組み立て（Hugging Face チュートリアル日本語訳・動画つき）]({{ '/assembly/' | relative_url }})
+- [LeRobot 導入]({{ '/software/' | relative_url }})
+- [データ収集と学習]({{ '/train/' | relative_url }})
+- [校正（WebUI 3 点法）]({{ '/calibration/' | relative_url }})
 - [カメラや柔軟グリッパーなどの拡張]({{ '/optional/' | relative_url }})
 - [URDF / MuJoCo]({{ '/simulation/' | relative_url }})
 - [よくあるつまずき]({{ '/troubleshooting/' | relative_url }})

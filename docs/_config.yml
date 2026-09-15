@@ -31,10 +31,12 @@ nav:
     url: /parts/
   - title: 3Dプリント
     url: /printing/
-  - title: 組み立て
+  - title: 組み立て（本編）
     url: /assembly/
-  - title: ソフトウェア
+  - title: LeRobot 導入
     url: /software/
+  - title: データ収集と学習
+    url: /train/
   - title: キャリブレーション
     url: /calibration/
   - title: オプション部品

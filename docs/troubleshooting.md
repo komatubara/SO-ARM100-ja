@@ -40,5 +40,6 @@ Windows なら Feetech 公式ソフト、Ubuntu なら FT_SCServo_Debug_Qt で�
 ## 公式の助け場所
 
 - ハードウェア: [TheRobotStudio/SO-ARM100 の Issue](https://github.com/TheRobotStudio/SO-ARM100/issues)
+- 組み立てとモーター設定の日本語訳: [組み立て本編]({{ '/assembly/' | relative_url }})
 - ソフトウェア手順: [LeRobot Discord](https://discord.gg/ggrqhPTsMe) と [Hugging Face ドキュメント](https://huggingface.co/docs/lerobot/so101)
 - この日本語訳の誤訳: [komatubara/SO-ARM100-ja](https://github.com/komatubara/SO-ARM100-ja)

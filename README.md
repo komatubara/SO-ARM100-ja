@@ -41,13 +41,13 @@ SO‑101 は、もともと RobotStudio と Hugging Face が共同で設計し�
 - **自分で組み立てる**
    - [部品表](#部品の調達) から部品を揃える。
    - 部品を 3D プリントする（またはプリント済み部品を注文する）。詳細は [部品のプリント](#部品のプリント)。
-   - [組み立てガイド](https://huggingface.co/docs/lerobot/so101)（英語）に従う。日本語の要約は [解説サイトの組み立てページ](https://komatubara.github.io/SO-ARM100-ja/assembly/) を参照。
+   - Hugging Face の [組み立てガイド](https://huggingface.co/docs/lerobot/so101) に従う。日本語訳（動画つき）は [解説サイトの組み立てページ](https://komatubara.github.io/SO-ARM100-ja/assembly/) です。
 - **キットを買う**
    - [こちら](#キット) の販売元から、組み立て済みアームまたは部品キットを購入する。
-   - 必要に応じて [組み立てガイド](https://huggingface.co/docs/lerobot/so101) も参照する。
+   - 必要に応じて [組み立てガイド](https://huggingface.co/docs/lerobot/so101)（[日本語訳](https://komatubara.github.io/SO-ARM100-ja/assembly/)）も参照する。
 
 ### LeRobot 🤗 でのセットアップ
-部品が揃ったら、LeRobot の [チュートリアル](https://huggingface.co/docs/lerobot/so101) に沿って SO-101 をセットアップできます。日本語の手順は [解説サイト](https://komatubara.github.io/SO-ARM100-ja/software/) にまとめています。
+部品が揃ったら、LeRobot の [チュートリアル](https://huggingface.co/docs/lerobot/so101) に沿って SO-101 をセットアップできます。日本語訳は解説サイトの [組み立て](https://komatubara.github.io/SO-ARM100-ja/assembly/)、[導入](https://komatubara.github.io/SO-ARM100-ja/software/)、[データ収集と学習](https://komatubara.github.io/SO-ARM100-ja/train/) です。
 
 ### オプションハードウェア 🔧
 このリポジトリには、リーダー用のかさ上げベースや各種カメラマウントなど、拡張用のハードウェア設計も含まれています。[一覧はこちら](#オプションハードウェア)。

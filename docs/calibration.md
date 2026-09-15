@@ -4,7 +4,9 @@ eyebrow: 校正
 lead: リーダーとフォロワーが同じ姿勢のとき、同じ数値になるようにします。別の個体で学習したモデルを移すときも、この対応が揃っていることが前提です。
 ---
 
-公式の標準手順と動画: [SO-101 の Calibrate 節](https://huggingface.co/docs/lerobot/so101)
+標準の校正手順と公式動画の日本語訳は [組み立てページのキャリブレーション節]({{ '/assembly/' | relative_url }}#キャリブレーション校正) にあります。原本は [SO-101 の Calibrate](https://huggingface.co/docs/lerobot/so101) です。
+
+このページは、6 軸を同時に中点へ保つのが難しいときの **WebUI 3 点校正** です。
 
 ## 標準の校正（LeRobot）
 
