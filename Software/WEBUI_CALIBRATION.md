@@ -1,66 +1,71 @@
-# WebUI 3-Point Calibration Studio Guide for SO-ARM100 / SO-101
+# SO-ARM100 / SO-101 向け WebUI 3 点キャリブレーション Studio ガイド
 
-This guide details how to use the interactive **WebUI 3-Point Calibration Studio** for calibrating Feetech STS3215 serial bus servos on the SO-ARM100 and SO-101 follower arms.
-
----
-
-## 🌟 Why Use WebUI Calibration?
-
-Traditional hand-held midpoint calibration requires manually holding all 6 joints in mid-air simultaneously. This introduces position errors (±50–200 ticks per joint) and can drive Motor 3 (`elbow_flex`) into hardstop collisions (~3660 ticks).
-
-The **WebUI Calibration Studio** fixes this by providing:
-1. **Interactive 3-Point Calibration**: Capture `📍 Min`, `🏠 Home`, and `📍 Max` independently per joint.
-2. **Single-Servo Isolation**: Moves only one target joint while holding the other 5 servos securely at their current positions.
-3. **Safe Torque Limits**: Applies a **30% torque cap** (`Reg 48 = 300`) and smooth 50Hz cosine S-curve speed interpolation to prevent gear stripping and sudden snaps.
-4. **Instant Telemetry**: Live position feedback directly in your browser.
-5. **Safe File Updates**: Updates `follower.json` cleanly on disk without deleting existing calibration history.
+このガイドでは、SO-ARM100 および SO-101 フォロワーアームの Feetech STS3215 シリアルバスサーボを校正する、対話型 **WebUI 3-Point Calibration Studio** の使い方を説明します。
 
 ---
 
-## 🚀 Step-by-Step Instructions
+## 🌟 なぜ WebUI キャリブレーションか
 
-### Step 1: Launch the Calibration Studio
-On your host computer (Raspberry Pi, Linux, macOS, or Windows) connected to your arm via USB:
+従来の手持ち中点キャリブレーションでは、6 関節すべてを空中で同時に中立姿勢に保つ必要があります。これだと位置誤差（関節あたり ±50〜200 ティック）が出やすく、モーター 3（`elbow_flex`）をハードストップにぶつけてしまう（約 3660 ティック）こともあります。
+
+**WebUI Calibration Studio** は次の仕組みでこれを避けます。
+
+1. **対話型 3 点キャリブレーション**: 関節ごとに `📍 Min`、`🏠 Home`、`📍 Max` を独立して記録する。
+2. **単一サーボの隔離**: 対象関節だけを動かし、残りの 5 サーボは現在位置で固定する。
+3. **安全なトルク制限**: **トルク上限 30%**（`Reg 48 = 300`）と、50Hz の滑らかなコサイン S カーブ速度補間で、ギア破損や急な飛び出しを防ぐ。
+4. **即時テレメトリ**: ブラウザ上で現在位置をライブ表示する。
+5. **安全なファイル更新**: 既存の校正履歴を消さずに `follower.json` をディスクへ更新する。
+
+---
+
+## 🚀 手順
+
+### 手順 1: Calibration Studio を起動する
+
+アームを USB 接続したホスト（Raspberry Pi、Linux、macOS、Windows）で:
 
 ```bash
 python pi_servo_studio.py
 ```
-*(Or when using LeRobot integration: `lerobot-calibrate --robot.type=so101_follower --webui`)*
+（LeRobot 連携の場合: `lerobot-calibrate --robot.type=so101_follower --webui`）
 
-Open your browser and navigate to:
+ブラウザで次を開きます。
+
 ```
 http://localhost:8086
 ```
 
 ---
 
-### Step 2: Calibrate Each Joint (3-Point Workflow)
+### 手順 2: 各関節を校正する（3 点ワークフロー）
 
-For each motor (`1` through `6`):
+モーター `1` から `6` まで、それぞれ次を行います。
 
-1. **Select Joint**: Click on the joint name (e.g., `Motor 3 - Elbow Flex`).
-2. **Set Min Limit (`📍 Capture Min`)**:
-   - Manually guide or jog the joint to its physical minimum endstop.
-   - Click **`📍 Capture Min`**.
-3. **Set Home Position (`🏠 Capture Home`)**:
-   - Move the joint to its default tucked/resting posture.
-   - Click **`🏠 Capture Home`**.
-4. **Set Max Limit (`📍 Capture Max`)**:
-   - Move the joint to its physical maximum endstop.
-   - Click **`📍 Capture Max`**.
-
----
-
-### Step 3: Verify & Save
-
-1. Click **`Safe Test Home`** to test joint movement at 30% torque limit.
-2. Click **`Save Calibration`** to update `follower.json`.
+1. **関節を選ぶ**: 関節名（例: `Motor 3 - Elbow Flex`）をクリックする。
+2. **最小位置を設定する（`📍 Capture Min`）**:
+   - 関節を物理的な最小エンドストップまで手動で動かす（またはジョグする）。
+   - **`📍 Capture Min`** をクリックする。
+3. **ホーム位置を設定する（`🏠 Capture Home`）**:
+   - 関節をデフォルトの収納／休息姿勢に動かす。
+   - **`🏠 Capture Home`** をクリックする。
+4. **最大位置を設定する（`📍 Capture Max`）**:
+   - 関節を物理的な最大エンドストップまで動かす。
+   - **`📍 Capture Max`** をクリックする。
 
 ---
 
-## 🛡️ Safety Systems Built-In
+### 手順 3: 確認して保存する
 
-- **Torque Cap**: Enforces 30% maximum PWM torque limit ($300 / 1000$).
-- **S-Curve Interpolation**: Cosine velocity profile eliminates initial movement jerks:
-  $$lpha = rac{1 - \cos(\pi t / T)}{2}$$
-- **Serial Buffer Reset**: Flushes UART input/output buffers before every command to prevent stale byte echoes over half-duplex serial bus (`/dev/ttyACM0`).
+1. **`Safe Test Home`** をクリックし、トルク上限 30% で関節の動きを確認する。
+2. **`Save Calibration`** をクリックし、`follower.json` を更新する。
+
+---
+
+## 🛡️ 組み込みの安全機構
+
+- **トルク上限**: PWM トルクを最大 30% に制限する（$300 / 1000$）。
+- **S カーブ補間**: コサイン速度プロファイルで始動時のジャークを抑える。
+
+  $$\alpha = \frac{1 - \cos(\pi t / T)}{2}$$
+
+- **シリアルバッファのリセット**: 半二重シリアルバス（`/dev/ttyACM0`）の古いエコーを防ぐため、コマンドごとに UART 入出力バッファをフラッシュする。

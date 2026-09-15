@@ -1,153 +1,164 @@
 <div align="center">
 
    <h1>Standard Open SO-100 & SO-101 Arms</h1>
+   <p><strong>非公式日本語ドキュメント</strong></p>
    <div style="display: flex; gap: 1rem; justify-content: center; align-items: center;" >
    <img
       src="media/SO101_Follower.webp?raw=true"
-      alt="SO-101 follower arm"
-      title="SO-101 follower arm"
+      alt="SO-101 フォロワーアーム"
+      title="SO-101 フォロワーアーム"
       style="width: 40%;"
     />
    <img
       src="media/SO101_Leader.webp?raw=true"
-      alt="SO-101 leader arm"
-      title="SO-101 leader arm"
+      alt="SO-101 リーダーアーム"
+      title="SO-101 リーダーアーム"
       style="width: 40%;"
     />
 </div>
 
 <h2>
-    <p>Build Your Own SO-101 Robot!</p>
+    <p>自分で SO-101 ロボットを組み立てよう</p>
 </h2>
-
-The SO‑101 is the next‑generation version of the SO‑100 robot arm, originally designed by the [RobotStudio](https://www.therobotstudio.com) in collaboration with [Hugging Face](https://huggingface.co/lerobot). It has improved wiring, is easier to assemble (no gear removal) and uses updated motors for the leader arm.
-
-These arms are designed to work seamlessly with the open‑source 🤗 LeRobot library. Join our community on [Discord](https://discord.gg/ggrqhPTsMe) to collaborate on both hardware and software, and help make end‑to‑end AI for robotics more accessible.
 
 </div>
 
-### Documentation 📖
-- For the SO‑101 docs, follow this page further.
-- Here you can find the [SO‑100 docs](SO100.md) which is deprecated.
+> **これは非公式の日本語訳です。** 原本は [TheRobotStudio/SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100)（[RobotStudio](https://www.therobotstudio.com) と [Hugging Face](https://huggingface.co/lerobot) の共同設計）です。英語原文は [README.en.md](README.en.md) を参照してください。
+>
+> **日本語解説サイト（GitHub Pages）:** [https://komatubara.github.io/SO-ARM100-ja/](https://komatubara.github.io/SO-ARM100-ja/)
 
-### Getting Your Own SO‑101 
-You have two options:
-- **Build it Yourself**
-   - Source the components from the [Bill of Materials](#sourcing-parts).
-   - 3D print the parts (or order the 3D printed parts), explained in [Printing the Parts](#printing-the-parts).
-   - Follow our [Assembly Guide](https://huggingface.co/docs/lerobot/so101).
-- **Buy a Kit**
-   - Buy assembled arms or a parts kit from one of the vendors [here](#kits).
-   - Optionally follow our [Assembly Guide](https://huggingface.co/docs/lerobot/so101).
+SO‑101 は、もともと RobotStudio と Hugging Face が共同で設計した SO‑100 ロボットアームの次世代版です。配線が改善され、組み立てが簡単になり（ギアの取り外しが不要）、リーダーアーム用モーターも更新されています。
 
-### Setup with LeRobot 🤗
-After sourcing all parts you can setup your SO-101 with LeRobot [tutorial](https://huggingface.co/docs/lerobot/so101). 
+これらのアームは、オープンソースの 🤗 LeRobot ライブラリと組み合わせて使う前提で設計されています。ハードウェアとソフトウェアの両方について、[Discord](https://discord.gg/ggrqhPTsMe) コミュニティで協力しながら、エンドツーエンドのロボット AI をより身近にすることを目指しています。
 
-### Optional Hardware 🔧
-This repository also includes a range of optional hardware designs such as a raised leader base and different camera mounts. Here you can explore the [full list](#optional-hardware).
+### ドキュメント 📖
+- SO‑101 の説明は、このページの続きを読んでください。
+- 旧版の [SO‑100 ドキュメント](SO100.md) は非推奨です。
+- 手順を追って読みたい場合は、[日本語解説サイト](https://komatubara.github.io/SO-ARM100-ja/) が便利です。
+
+### SO‑101 を入手する
+次の 2 通りがあります。
+- **自分で組み立てる**
+   - [部品表](#部品の調達) から部品を揃える。
+   - 部品を 3D プリントする（またはプリント済み部品を注文する）。詳細は [部品のプリント](#部品のプリント)。
+   - [組み立てガイド](https://huggingface.co/docs/lerobot/so101)（英語）に従う。日本語の要約は [解説サイトの組み立てページ](https://komatubara.github.io/SO-ARM100-ja/assembly/) を参照。
+- **キットを買う**
+   - [こちら](#キット) の販売元から、組み立て済みアームまたは部品キットを購入する。
+   - 必要に応じて [組み立てガイド](https://huggingface.co/docs/lerobot/so101) も参照する。
+
+### LeRobot 🤗 でのセットアップ
+部品が揃ったら、LeRobot の [チュートリアル](https://huggingface.co/docs/lerobot/so101) に沿って SO-101 をセットアップできます。日本語の手順は [解説サイト](https://komatubara.github.io/SO-ARM100-ja/software/) にまとめています。
+
+### オプションハードウェア 🔧
+このリポジトリには、リーダー用のかさ上げベースや各種カメラマウントなど、拡張用のハードウェア設計も含まれています。[一覧はこちら](#オプションハードウェア)。
 
 
-## Kits
+## キット
 
-You can find all optional for SO-100/SO-101 kits here:
+SO-100 / SO-101 用のキットは次の販売元で入手できます。
 
-- from RobotEd :switzerland: [Switzerland](https://roboted.ch/en/shop/so-101-robot-arm-kit) (They include **3d printed frame kits**, **electronics kits** and **complete arm kits**)
-- from Robonine :earth_africa: [International](https://robonine.com/) (They include **parts** kits)
-- from PartaBot :us: [US](https://partabot.com) (They include **assembled** versions, and also sell LeKiwi and Koch robots)
-- from ForgeMotion Labs :us: [US](https://forgemotionlabs.com/products) or [Amazon US](https://www.amazon.com/s?me=A3TE39P97BKL59) (They include **3d printed frame kits**, **electronics kits** and **complete arm kits**)
-- from Seeed studio :earth_africa: [International](https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html) or :cn: [China](https://item.taobao.com/item.htm?id=878010637397&skuId=5915703371829&spm=a213gs.v2success.0.0.4cbf4831mkqWLn) or :jp: [Akizuki Denshi](https://akizukidenshi.com/catalog/g/g131169/) or [Aliexpress](https://www.aliexpress.com/item/3256808696884714.html?gatewayAdapt=4itemAdapt) (They include **3d printed kits**)
-- from WowRobo :earth_africa: [International](https://shop.wowrobo.com/products/so-arm101-diy-kit-assembled-version-1) or :cn: [China](https://item.taobao.com/item.htm?ft=t&id=860171734711) (They include **assembled** versions)
-- from RoboSEasy :kr: [South Korea](https://smartstore.naver.com/roboseasy)
-- from NeoBot :cn: [China](https://item.taobao.com/item.htm?ft=t&id=957685951340)
-- from Autodiscovery :eu: [EU](https://autodiscovery.eu/en/products/so-101-kit??utm_source=hf&utm_medium=shop&utm_content=web)
+- RobotEd :switzerland: [スイス](https://roboted.ch/en/shop/so-101-robot-arm-kit)（**3D プリントフレームキット**、**電子部品キット**、**完成アームキット**）
+- Robonine :earth_africa: [国際](https://robonine.com/)（**部品**キット）
+- PartaBot :us: [米国](https://partabot.com)（**組み立て済み**、LeKiwi や Koch ロボットも販売）
+- ForgeMotion Labs :us: [米国](https://forgemotionlabs.com/products) または [Amazon US](https://www.amazon.com/s?me=A3TE39P97BKL59)（**3D プリントフレームキット**、**電子部品キット**、**完成アームキット**）
+- Seeed Studio :earth_africa: [国際](https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html) / :cn: [中国](https://item.taobao.com/item.htm?id=878010637397&skuId=5915703371829&spm=a213gs.v2success.0.0.4cbf4831mkqWLn) / :jp: [秋月電子](https://akizukidenshi.com/catalog/g/g131169/) / [Aliexpress](https://www.aliexpress.com/item/3256808696884714.html?gatewayAdapt=4itemAdapt)（**3D プリントキット**）
+- WowRobo :earth_africa: [国際](https://shop.wowrobo.com/products/so-arm101-diy-kit-assembled-version-1) / :cn: [中国](https://item.taobao.com/item.htm?ft=t&id=860171734711)（**組み立て済み**）
+- RoboSEasy :kr: [韓国](https://smartstore.naver.com/roboseasy)
+- NeoBot :cn: [中国](https://item.taobao.com/item.htm?ft=t&id=957685951340)
+- Autodiscovery :eu: [EU](https://autodiscovery.eu/en/products/so-101-kit??utm_source=hf&utm_medium=shop&utm_content=web)
 
-Additionally you can find SO-100 follower arm kit (without leader arm) on [Phospho](https://robots.phospho.ai). It can be especially useful if you own a VR headset.
+フォロワーアームのみのキット（リーダーなし）は [Phospho](https://robots.phospho.ai) でも入手できます。VR ヘッドセットを持っている場合に特に便利です。
 
-## Sourcing Parts
+日本から買う場合の目安は、**秋月電子の Seeed キット**と、下の部品表の **Buy JP** 列です。
 
-The follower and leader arm for this teleoperation setup will almost the same off the shelf parts (except for the motors). If you plan on creating the classic teleoperation set up to be used with the `LeRobot` library please buy from the Parts for Two Arms below. 
+## 部品の調達
 
-We only have links for US, EU, CN, and JP for now. If you find links for other countries, please create an issue or PR so that we add them to the list. Note that prices and items may vary depending on geographic location.
+このテレオペレーション構成では、フォロワーアームとリーダーアームの市販部品はほぼ同じです（モーターだけ異なります）。`LeRobot` ライブラリで使う定番の遠隔操作セットを作る場合は、下の「2 本アーム用部品」から購入してください。
 
-> [!IMPORTANT]  
-> The STS3215 motors for the follower arm comes in two sizes. The 7.4V has a stall torque of 16.5kg.cm at 6V (and likely slightly less for a 5V power supply). The 12V version has a stall torque of 30kg.cm. While we found the 7.4V to be sufficient, if you would like more powerful motors you can buy the 12V version [here](https://www.alibaba.com/product-detail/6PCS-12V-30KG-STS3215-High-Torque_1601216757543.html). Note if you do this, you will also have to buy a 12V 5A+ power supply instead of a 5V one. The leader arm is always 7.4V for the SO101.
+現時点では US / EU / CN / JP のリンクのみです。他の国のリンクを見つけたら、Issue か PR で追加してもらえると助かります。価格や取り扱い商品は地域によって異なります。
 
-#### Parts For Two Arms (Follower and Leader Setup):
+> [!IMPORTANT]
+> フォロワーアーム用の STS3215 モーターには 2 種類のサイズがあります。7.4V 版は 6V 時のストールトルクが 16.5kg·cm（5V 電源ではやや下がる見込み）です。12V 版はストールトルク 30kg·cm です。7.4V でも十分なことが多いですが、より強力なモーターが欲しければ 12V 版を [こちら](https://www.alibaba.com/product-detail/6PCS-12V-30KG-STS3215-High-Torque_1601216757543.html) から購入できます。その場合、5V ではなく 12V 5A 以上の電源も必要です。SO-101 のリーダーアームは常に 7.4V です。
 
-| Part                                        | Amount | Unit Cost (US) | Buy US                                                                                                    | Unit Cost (EU) | Buy EU                                                                                            | Unit Cost (RMB) | Buy CN                                                                          | Unit Cost (JPY) | Buy JP                                                                          |
+#### 2 本アーム用部品（フォロワー + リーダー）:
+
+| 部品 | 数量 | 単価 (US) | 購入 US | 単価 (EU) | 購入 EU | 単価 (RMB) | 購入 CN | 単価 (JPY) | 購入 JP |
 | ------------------------------------------- | ------ | -------------- | --------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------- |
-| STS3215 Servo 7.4V, 1/345 gear (C001) **<sup>[2](#leaderbundle)</sup>  | 7     | $13.89            | [Alibaba](https://www.alibaba.com/product-detail/Top-Seller-Low-Cost-Feetech-STS3215_1600999461525.html)         | €12.2           | [Alibaba](https://www.alibaba.com/product-detail/Top-Seller-Low-Cost-Feetech-STS3215_1600999461525.html) | ￥97.72         | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438)  | ￥2,980         | [Akizuki Denshi](https://akizukidenshi.com/catalog/g/g116312/)  |
-| STS3215 Servo 7.4V, 1/191 gear (C044) **<sup>[2](#leaderbundle)</sup>   | 2     | $13.89            | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM101-Servo-7_1601430747897.html?spm=a2747.product_manager.0.0.59a371d2W4e0SR)         | €12.2           | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM101-Servo-7_1601430747897.html?spm=a2747.product_manager.0.0.59a371d2W4e0SR) | ￥97.72         | -  | ￥2,980         | [Akizuki Denshi](https://akizukidenshi.com/catalog/g/g131131/)  |
-| STS3215 Servo 7.4V, 1/147 gear (C046) **<sup>[2](#leaderbundle)</sup>    | 3     | $13.89            | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM101-Servo-7_1601430760797.html?spm=a2747.product_manager.0.0.167371d25QeX3F)         | €12.2           | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM101-Servo-7_1601430760797.html?spm=a2747.product_manager.0.0.167371d25QeX3F) | ￥97.72         | -  | ￥2,980         | [Akizuki Denshi](https://akizukidenshi.com/catalog/g/g131132/)  |
-| Motor Control Board                         | 2      | $10.6           | [Amazon](https://www.amazon.com/Waveshare-Integrates-Control-Circuit-Supports/dp/B0CTMM4LWK/)             | €11.4            | [Amazon](https://www.amazon.fr/-/en/dp/B0CJ6TP3TP/)                                               | ￥27            | [TaoBao](https://detail.tmall.com/item.htm?id=738817173460&skuId=5096283384143) | ￥980         | [Akizuki Denshi](https://akizukidenshi.com/catalog/g/g131227/)  |
-| USB-C Cable 2 pcs                           | 1      | $7             | [Amazon](https://www.amazon.com/Charging-etguuds-Charger-Braided-Compatible/dp/B0B8NWLLW2/?th=1)          | €7             | [Amazon](https://www.amazon.fr/dp/B07BNF842T/)                                                    | ￥23.9\*2       | [TaoBao](https://detail.tmall.com/item.htm?id=44425281296&skuId=5611379016222)  | ￥1,498         | [Amazon](https://www.amazon.co.jp/dp/B0C3H9L6KZ)  |
-| Power Supply    | 2      | $10            | [Amazon](https://www.amazon.com/Facmogu-Switching-Transformer-Compatible-5-5x2-1mm/dp/B087LY41PV/)        | €15.7            | [Amazon](https://www.amazon.fr/-/en/dp/B01HRR9GY4/)                                               | ￥22.31         | [TaoBao](https://item.taobao.com/item.htm?id=544824248494&skuId=4974994129990)  | ￥1,550         | [Akizuki Denshi](https://akizukidenshi.com/catalog/g/g106238/)  |
-| Table Clamp 4pcs                            | 1      | $9             | [Amazon](https://www.amazon.com/TAODAN-Trigger-Ratchet-Woodworking-Processes/dp/B0DJNXF8WH?rps=1&sr=1-18) | €9.7 | [Amazon](https://www.amazon.fr/Connex-COXT865210-Lot-Serre-joints-bricolage/dp/B00NA3T2CQ)      | ￥5.2*4 | [TaoBao](https://detail.tmall.com/item.htm?id=801399113134&skuId=5633627126649)                   | ￥2,200         | [Amazon](https://www.amazon.co.jp/dp/B0DJNXF8WH)  |
-| Screwdriver Set<sup>[1](#myfootnote1)</sup> | 1      | $6             | [Amazon](https://www.amazon.com/Precision-Phillips-Screwdriver-Electronics-Computer/dp/B0DB227RTH)        | €9            | [Amazon](https://www.amazon.fr/Vinabo-Magnétique-Electronique-Réparation-Informatique/dp/B0BNQBNFFJ)                                                    | ￥14.9          | [TaoBao](https://detail.tmall.com/item.htm?id=675684600845&skuId=4856851392176) | ￥500         | [Amazon](https://www.amazon.co.jp/dp/B01MDNJVMN)  |
-| Total                                       | ---    | $229.88           | ---                                                                                                       | €226.3           | ---                                                                                               | ￥1343.16       | ---                                                                             | ￥44,530         | ---                                                                             |
+| STS3215 サーボ 7.4V、1/345 ギア (C001) **<sup>[2](#leaderbundle)</sup>  | 7     | $13.89            | [Alibaba](https://www.alibaba.com/product-detail/Top-Seller-Low-Cost-Feetech-STS3215_1600999461525.html)         | €12.2           | [Alibaba](https://www.alibaba.com/product-detail/Top-Seller-Low-Cost-Feetech-STS3215_1600999461525.html) | ￥97.72         | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438)  | ￥2,980         | [秋月電子](https://akizukidenshi.com/catalog/g/g116312/)  |
+| STS3215 サーボ 7.4V、1/191 ギア (C044) **<sup>[2](#leaderbundle)</sup>   | 2     | $13.89            | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM101-Servo-7_1601430747897.html?spm=a2747.product_manager.0.0.59a371d2W4e0SR)         | €12.2           | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM101-Servo-7_1601430747897.html?spm=a2747.product_manager.0.0.59a371d2W4e0SR) | ￥97.72         | -  | ￥2,980         | [秋月電子](https://akizukidenshi.com/catalog/g/g131131/)  |
+| STS3215 サーボ 7.4V、1/147 ギア (C046) **<sup>[2](#leaderbundle)</sup>    | 3     | $13.89            | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM101-Servo-7_1601430760797.html?spm=a2747.product_manager.0.0.167371d25QeX3F)         | €12.2           | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM101-Servo-7_1601430760797.html?spm=a2747.product_manager.0.0.167371d25QeX3F) | ￥97.72         | -  | ￥2,980         | [秋月電子](https://akizukidenshi.com/catalog/g/g131132/)  |
+| モーター制御ボード                         | 2      | $10.6           | [Amazon](https://www.amazon.com/Waveshare-Integrates-Control-Circuit-Supports/dp/B0CTMM4LWK/)             | €11.4            | [Amazon](https://www.amazon.fr/-/en/dp/B0CJ6TP3TP/)                                               | ￥27            | [TaoBao](https://detail.tmall.com/item.htm?id=738817173460&skuId=5096283384143) | ￥980         | [秋月電子](https://akizukidenshi.com/catalog/g/g131227/)  |
+| USB-C ケーブル 2 本セット                           | 1      | $7             | [Amazon](https://www.amazon.com/Charging-etguuds-Charger-Braided-Compatible/dp/B0B8NWLLW2/?th=1)          | €7             | [Amazon](https://www.amazon.fr/dp/B07BNF842T/)                                                    | ￥23.9\*2       | [TaoBao](https://detail.tmall.com/item.htm?id=44425281296&skuId=5611379016222)  | ￥1,498         | [Amazon](https://www.amazon.co.jp/dp/B0C3H9L6KZ)  |
+| 電源    | 2      | $10            | [Amazon](https://www.amazon.com/Facmogu-Switching-Transformer-Compatible-5-5x2-1mm/dp/B087LY41PV/)        | €15.7            | [Amazon](https://www.amazon.fr/-/en/dp/B01HRR9GY4/)                                               | ￥22.31         | [TaoBao](https://item.taobao.com/item.htm?id=544824248494&skuId=4974994129990)  | ￥1,550         | [秋月電子](https://akizukidenshi.com/catalog/g/g106238/)  |
+| テーブルクランプ 4 個セット                            | 1      | $9             | [Amazon](https://www.amazon.com/TAODAN-Trigger-Ratchet-Woodworking-Processes/dp/B0DJNXF8WH?rps=1&sr=1-18) | €9.7 | [Amazon](https://www.amazon.fr/Connex-COXT865210-Lot-Serre-joints-bricolage/dp/B00NA3T2CQ)      | ￥5.2*4 | [TaoBao](https://detail.tmall.com/item.htm?id=801399113134&skuId=5633627126649)                   | ￥2,200         | [Amazon](https://www.amazon.co.jp/dp/B0DJNXF8WH)  |
+| ドライバーセット<sup>[1](#myfootnote1)</sup> | 1      | $6             | [Amazon](https://www.amazon.com/Precision-Phillips-Screwdriver-Electronics-Computer/dp/B0DB227RTH)        | €9            | [Amazon](https://www.amazon.fr/Vinabo-Magnétique-Electronique-Réparation-Informatique/dp/B0BNQBNFFJ)                                                    | ￥14.9          | [TaoBao](https://detail.tmall.com/item.htm?id=675684600845&skuId=4856851392176) | ￥500         | [Amazon](https://www.amazon.co.jp/dp/B01MDNJVMN)  |
+| 合計                                       | ---    | $229.88           | ---                                                                                                       | €226.3           | ---                                                                                               | ￥1343.16       | ---                                                                             | ￥44,530         | ---                                                                             |
 
-<a name="leaderbundle">2</a>: You can buy **all six STS3215 servos needed for the SO-101 leader arm**  
-(3 × 1/147 gear (C046), 2 × 1/191 gear (C044), 1 × 1/345 gear (C001)) in a single bundle on [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1601428584027.html?spm=a2747.product_manager.0.0.757c2c3clU7uH3).
+<a name="leaderbundle">2</a>: SO-101 リーダーアームに必要な **STS3215 サーボ 6 個すべて**  
+（3 × 1/147 ギア (C046)、2 × 1/191 ギア (C044)、1 × 1/345 ギア (C001)）は、[Alibaba のセット](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1601428584027.html?spm=a2747.product_manager.0.0.757c2c3clU7uH3) でまとめて購入できます。
 
-#### Parts for One Follower Arm:
+#### フォロワーアーム 1 本用部品:
 
-| Part                                        | Amount | Unit Cost (US) | Buy US                                                                                                                                                | Unit Cost (EU) | Buy EU                                                                                                                                                | Unit Cost (RMB) | Buy CN                                                                          | Unit Cost (JPY) | Buy JP                                                                          |
+| 部品 | 数量 | 単価 (US) | 購入 US | 単価 (EU) | 購入 EU | 単価 (RMB) | 購入 CN | 単価 (JPY) | 購入 JP |
 | ------------------------------------------- | ------ | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------- |
-| STS3215 Servo 7.4V, 1/345 gear (C001)    | 6      | $13.89            | [Alibaba](https://www.alibaba.com/product-detail/Top-Seller-Low-Cost-Feetech-STS3215_1600999461525.html?spm=a2747.product_manager.0.0.11be71d2ARQb82) | €12.2            | [Alibaba](https://www.alibaba.com/product-detail/Top-Seller-Low-Cost-Feetech-STS3215_1600999461525.html?spm=a2747.product_manager.0.0.11be71d2ARQb82) | ￥97.72         | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438)  | ￥2,980         | [Akizuki Denshi](https://akizukidenshi.com/catalog/g/g116312/)  |
-| Motor Control Board                         | 1      | $10.6            | [Amazon](https://www.amazon.com/Waveshare-Integrates-Control-Circuit-Supports/dp/B0CTMM4LWK/)                                                         | €11.4            | [Amazon](https://www.amazon.fr/-/en/dp/B0CJ6TP3TP/)                                                                                                   | ￥27            | [TaoBao](https://detail.tmall.com/item.htm?id=738817173460&skuId=5096283384143) | ￥980         | [Akizuki Denshi](https://akizukidenshi.com/catalog/g/g131227/)  |
-| USB-C Cable 2 pcs                           | 1      | $7             | [Amazon](https://www.amazon.com/Charging-etguuds-Charger-Braided-Compatible/dp/B0B8NWLLW2/?th=1)                                                      | €7             | [Amazon](https://www.amazon.fr/dp/B07BNF842T/)                                                                                                        | ￥23.9          | [TaoBao](https://detail.tmall.com/item.htm?id=44425281296&skuId=5611379016222)  | ￥1,498         | [Amazon](https://www.amazon.co.jp/dp/B0C3H9L6KZ)  |
-| Power Supply    | 1      | $10            | [Amazon](https://www.amazon.com/Facmogu-Switching-Transformer-Compatible-5-5x2-1mm/dp/B087LY41PV/)                                                    | €15.7            | [Amazon](https://www.amazon.fr/-/en/dp/B01HRR9GY4/)                                                                                                   | ￥22.31         | [TaoBao](https://item.taobao.com/item.htm?id=544824248494&skuId=4974994129990)  | ￥1,550         | [Akizuki Denshi](https://akizukidenshi.com/catalog/g/g106238/)  |
-| Table Clamp 2pcs                            | 1      | $5             | [Amazon](https://www.amazon.com/Mr-Pen-Carpenter-Clamp-6inch/dp/B092L925J4/)                                                                          | €8             | [Amazon](https://www.amazon.fr/-/en/dp/B08HZ1QRBF/)                                                                                                   | ￥7.8           | [TaoBao](https://detail.tmall.com/item.htm?id=738636473238&skuId=5505939904942) | ￥2,200         | [Amazon](https://www.amazon.co.jp/dp/B0DJNXF8WH)  |
-| Screwdriver Set<sup>[1](#myfootnote1)</sup> | 1      | $6             | [Amazon](https://www.amazon.com/Precision-Phillips-Screwdriver-Electronics-Computer/dp/B0DB227RTH)                                                    | €9            | [Amazon](https://www.amazon.fr/Vinabo-Magnétique-Electronique-Réparation-Informatique/dp/B0BNQBNFFJ)                                                                                                        | ￥14.9          | [TaoBao](https://detail.tmall.com/item.htm?id=675684600845&skuId=4856851392176) | ￥500         | [Amazon](https://www.amazon.co.jp/dp/B01MDNJVMN)  |
-| Total                                       | ---    | $121.94           | ---                                                                                                                                                   | €124.3        | ---                                                                                                                                                   | ￥682.23        | ---                                                                             | ￥24,414        | ---                                                                             |
+| STS3215 サーボ 7.4V、1/345 ギア (C001)    | 6      | $13.89            | [Alibaba](https://www.alibaba.com/product-detail/Top-Seller-Low-Cost-Feetech-STS3215_1600999461525.html?spm=a2747.product_manager.0.0.11be71d2ARQb82) | €12.2            | [Alibaba](https://www.alibaba.com/product-detail/Top-Seller-Low-Cost-Feetech-STS3215_1600999461525.html?spm=a2747.product_manager.0.0.11be71d2ARQb82) | ￥97.72         | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438)  | ￥2,980         | [秋月電子](https://akizukidenshi.com/catalog/g/g116312/)  |
+| モーター制御ボード                         | 1      | $10.6            | [Amazon](https://www.amazon.com/Waveshare-Integrates-Control-Circuit-Supports/dp/B0CTMM4LWK/)                                                         | €11.4            | [Amazon](https://www.amazon.fr/-/en/dp/B0CJ6TP3TP/)                                                                                                   | ￥27            | [TaoBao](https://detail.tmall.com/item.htm?id=738817173460&skuId=5096283384143) | ￥980         | [秋月電子](https://akizukidenshi.com/catalog/g/g131227/)  |
+| USB-C ケーブル 2 本セット                           | 1      | $7             | [Amazon](https://www.amazon.com/Charging-etguuds-Charger-Braided-Compatible/dp/B0B8NWLLW2/?th=1)                                                      | €7             | [Amazon](https://www.amazon.fr/dp/B07BNF842T/)                                                                                                        | ￥23.9          | [TaoBao](https://detail.tmall.com/item.htm?id=44425281296&skuId=5611379016222)  | ￥1,498         | [Amazon](https://www.amazon.co.jp/dp/B0C3H9L6KZ)  |
+| 電源    | 1      | $10            | [Amazon](https://www.amazon.com/Facmogu-Switching-Transformer-Compatible-5-5x2-1mm/dp/B087LY41PV/)                                                    | €15.7            | [Amazon](https://www.amazon.fr/-/en/dp/B01HRR9GY4/)                                                                                                   | ￥22.31         | [TaoBao](https://item.taobao.com/item.htm?id=544824248494&skuId=4974994129990)  | ￥1,550         | [秋月電子](https://akizukidenshi.com/catalog/g/g106238/)  |
+| テーブルクランプ 2 個セット                            | 1      | $5             | [Amazon](https://www.amazon.com/Mr-Pen-Carpenter-Clamp-6inch/dp/B092L925J4/)                                                                          | €8             | [Amazon](https://www.amazon.fr/-/en/dp/B08HZ1QRBF/)                                                                                                   | ￥7.8           | [TaoBao](https://detail.tmall.com/item.htm?id=738636473238&skuId=5505939904942) | ￥2,200         | [Amazon](https://www.amazon.co.jp/dp/B0DJNXF8WH)  |
+| ドライバーセット<sup>[1](#myfootnote1)</sup> | 1      | $6             | [Amazon](https://www.amazon.com/Precision-Phillips-Screwdriver-Electronics-Computer/dp/B0DB227RTH)                                                    | €9            | [Amazon](https://www.amazon.fr/Vinabo-Magnétique-Electronique-Réparation-Informatique/dp/B0BNQBNFFJ)                                                                                                        | ￥14.9          | [TaoBao](https://detail.tmall.com/item.htm?id=675684600845&skuId=4856851392176) | ￥500         | [Amazon](https://www.amazon.co.jp/dp/B01MDNJVMN)  |
+| 合計                                       | ---    | $121.94           | ---                                                                                                                                                   | €124.3        | ---                                                                                                                                                   | ￥682.23        | ---                                                                             | ￥24,414        | ---                                                                             |
 
-<a name="myfootnote1">1</a>: You do not need to use this exact screwdriver set, but it is highly recommended to have phillips head screw driver sizes #0 and #1 for easiest screw installation and removal. These are both standard sizes which will likely appear in most small screwdriver sets.
+<a name="myfootnote1">1</a>: このドライバーセットそのものが必須ではありませんが、プラスドライバーの **#0** と **#1** があるとネジの取り付け・取り外しが格段に楽です。小型ドライバーセットに入っている標準サイズです。
 
-## Printing the Parts
+## 部品のプリント
 
-A variety of 3D printers are acceptable to print the parts necessary of the follower and leader arm. Follow the steps below to ensure a good print.
+フォロワー／リーダーアームに必要な部品は、さまざまな 3D プリンタで印刷できます。以下の手順で、失敗しにくい印刷を目指してください。
 
-### Step 1: Choose a Printer
-The STL files provided are ready to print on many FDM printers. Below are the tested and suggested settings though others may work.
-   1. Material: PLA+
-   2. Nozzle Diameter and Precision: 0.4mm nozzle diameter at 0.2mm layer height or 0.6mm nozzle at 0.4mm layer height.
-   3. Infill Density: 15%
-   4. Sample Printers: [Prusa MINI+](https://www.prusa3d.com/product/original-prusa-mini-semi-assembled-3d-printer-4/), [UP Plus 2](https://shop.tiertime.com/product/tiertime-up-plus-2-3d-printer/), [Creality Ender 3](https://www.amazon.com/Comgrow-Creality-Ender-Aluminum-220x220x250mm/dp/B07BR3F9N6/), [Bambu Lab A/P/X-series](https://bambulab.com)
+### 手順 1: プリンタを選ぶ
+同梱の STL は、多くの FDM プリンタでそのまま印刷できます。検証済みの推奨設定は次のとおりです（他の設定でも動く場合があります）。
+   1. 材料: PLA+
+   2. ノズル径と精度: ノズル 0.4mm / 積層 0.2mm、またはノズル 0.6mm / 積層 0.4mm
+   3. インフィル密度: 15%
+   4. 実機例: [Prusa MINI+](https://www.prusa3d.com/product/original-prusa-mini-semi-assembled-3d-printer-4/)、[UP Plus 2](https://shop.tiertime.com/product/tiertime-up-plus-2-3d-printer/)、[Creality Ender 3](https://www.amazon.com/Comgrow-Creality-Ender-Aluminum-220x220x250mm/dp/B07BR3F9N6/)、[Bambu Lab A/P/X シリーズ](https://bambulab.com)
 
-### Step 2: Set up the Printer
-   1. Ensure that the printer is calibrated and the bed level is correctly set using the printer specific instructions.
-   2. Clean the print bed, making sure it is free from dust, or grease. If cleaning the bed using water, or other liquid, dry the bed.
-   3. If your printer recommends it, use a standard glue stick and apply a thin, even layer of glue across the print area of the bed. Avoid clumping or uneven application.
-   4. Load the printer filament using printer specific instructions.
-   5. Ensure the printer settings match the ones suggested above (most printers have multiple settings so choose the ones that most closely match).
-   6. Set for supports everywhere but ignore slopes greater than 45 degrees to the horizontal.
-   7. There should be no supports in the screw holes with horizontal axes.
-### Step 3: Check Printer Accuracy
-   1. In the [Gauges](STL/Gauges) folder, there are two types of gauges, one to check the size of print against a standard 4x2 lego block and one against a STS3215 servo.
-      1. If you have a STS3215 servo, print:
+### 手順 2: プリンタを準備する
+   1. キャリブレーションとベッドレベリングが正しくできていることを、プリンタの手順に従って確認する。
+   2. プリントベッドを清掃し、ホコリや油分を落とす。水などで洗った場合はよく乾かす。
+   3. プリンタが推奨する場合は、スティックのりをベッドの印刷面に薄く均一に塗る。ダマやムラは避ける。
+   4. フィラメントをプリンタの手順どおりに装填する。
+   5. 印刷設定を上記の推奨に近づける（プリセットが複数ある場合は、いちばん近いものを選ぶ）。
+   6. サポートは全体に出すが、水平面から 45 度より緩い斜面は無視する。
+   7. 横向きのネジ穴にはサポートを入れない。
+
+### 手順 3: プリンタの精度を確認する
+   1. [Gauges](STL/Gauges) フォルダには 2 種類のゲージがあります。標準の 4x2 レゴブロック用と、STS3215 サーボ用です。
+      1. STS3215 サーボがある場合は次を印刷:
          1. [Gauge Zero](STL/Gauges/Gauge_0.STL)
          2. [Gauge Tight](STL/Gauges/Gauge_tight_1.STL)
-      2. If you have a standard lego block, print:
+      2. 標準レゴブロックがある場合は次を印刷:
          1. [Gauge Zero](STL/Gauges/Lego_Size_Test_02_zero.STL)
          2. [Gauge -0.1](STL/Gauges/Lego_Size_Test_02_minuspoint1.STL)
-   2. Test the gauge 0 against your given object (Lego or Servo). The fit should be similar to this [tutorial](https://youtu.be/dss8E3DG2rA).
-   3. If the fit is appropriate, go onto Step 4, otherwise, change your printer settings and try again or create an issue.
-### Step 4: Print the Parts
-All the parts for the leader or follower are for easy 3D printing already contained in a **single file**, correctly orientated for z upwards to minimize supports.
-   1. For printer bed sizes of 220mmx220mm (such as the Ender), print these files:
+   2. Gauge 0 を対象物（レゴまたはサーボ）に当てて確認する。フィット感は [この動画](https://youtu.be/dss8E3DG2rA) と同程度が目安です。
+   3. フィットが適切なら手順 4 へ。そうでなければ設定を変えて再印刷するか、Issue を立ててください。
+
+### 手順 4: 部品を印刷する
+リーダーまたはフォロワーの部品は、**1 ファイルにまとめて** あり、Z 上向きでサポートが最小になる向きになっています。
+   1. ベッドサイズ 220mm × 220mm（Ender など）の場合:
       - [Follower](STL/SO101/Follower/Ender_Follower_SO101.stl)
       - [Leader](STL/SO101/Leader/Ender_Leader_SO101.stl)
-   2. For printer bed sizes of 205mm x 250mm (such as the Prusa/Up):
+   2. ベッドサイズ 205mm × 250mm（Prusa / Up など）の場合:
       1. [Follower](STL/SO101/Follower/Prusa_Follower_SO101.stl)
       2. [Leader](STL/SO101/Leader/Prusa_Leader_SO101.stl)
 
-This table contains all individual files:
+個別ファイルの一覧:
+
 <details>
-<summary>Individual Part Files</summary>
+<summary>個別部品ファイル</summary>
 
-#### Common Parts
+#### 共通部品
 
-| Part                                | Link                                                             |
+| 部品 | リンク |
 |-------------------------------------|------------------------------------------------------------------|
 | Base_motor_holder_SO101.stl         | [Base_motor_holder_SO101.stl](STL/SO101/Individual/Base_motor_holder_SO101.stl)       |
 | Base_SO101.stl                      | [Base_SO101.stl](STL/SO101/Individual/Base_SO101.stl)                                 |
@@ -159,101 +170,98 @@ This table contains all individual files:
 | Wrist_Roll_Pitch_SO101.stl          | [Wrist_Roll_Pitch_SO101.stl](STL/SO101/Individual/Wrist_Roll_Pitch_SO101.stl)         |
 | WaveShare_Mounting_Plate_SO101.stl  | [WaveShare_Mounting_Plate_SO101.stl](STL/SO101/Individual/WaveShare_Mounting_Plate_SO101.stl) |
 
-#### Leader‑Specific Parts
+#### リーダー専用部品
 
-| Part                  | Link                                     |
+| 部品 | リンク |
 |-----------------------|------------------------------------------|
 | Handle_SO101.stl      | [Handle_SO101.stl](STL/SO101/Individual/Handle_SO101.stl)     |
 | Trigger_SO101.stl     | [Trigger_SO101.stl](STL/SO101/Individual/Trigger_SO101.stl)   |
 | Wrist_Roll_SO101.stl  | [Wrist_Roll_SO101.stl](STL/SO101/Individual/Wrist_Roll_SO101.stl) |
 
-#### Follower‑Specific Parts
+#### フォロワー専用部品
 
-| Part                            | Link                                                         |
+| 部品 | リンク |
 |---------------------------------|--------------------------------------------------------------|
 | Moving_Jaw_SO101.stl            | [Moving_Jaw_SO101.stl](STL/SO101/Individual/Moving_Jaw_SO101.stl)                 |
 | Wrist_Roll_Follower_SO101.stl   | [Wrist_Roll_Follower_SO101.stl](STL/SO101/Individual/Wrist_Roll_Follower_SO101.stl) |
 </details>
 
-### Step 5: Remove Supports
-   1. After the print is done, use a putty knife to scrape the the parts off the print bed.
-   2. Remove any support material from parts.
+### 手順 5: サポートを外す
+   1. 印刷が終わったら、パテナイフなどでベッドから部品を剥がす。
+   2. サポート材を取り除く。
 
-### Don't Own a 3D printer?
-Go here: [Printing services](./3DPRINT.md)
+### 3D プリンタを持っていない場合
+こちら: [印刷サービス](./3DPRINT.md)
 
-## Optional Hardware
-<!--Note: no hardware emoji here so links work correctly-->
-Extend your SO‑100/SO‑101 with these add-ons.
+## オプションハードウェア
+SO‑100 / SO‑101 を次のアドオンで拡張できます。
 <details>
-<summary>Add‑ons</summary>
+<summary>アドオン一覧</summary>
 
 #### 0. XLeRobot
 
-A dual-arm mobile robot for daily use, with 2x SO101 arms, 1x Lekiwi base, 1x 300Wh Anker Battery, 2x wrist RGB cameras, 1x head depth camera (with a 2-dof neck). Total cost 660$.
+日常用途向けの双腕モバイルロボット。SO101 アーム ×2、Lekiwi ベース ×1、Anker 300Wh バッテリー ×1、手首 RGB カメラ ×2、頭部デプスカメラ ×1（2 自由度ネック付き）。総額約 660 ドル。
 
-<img width="1725" height="1140" alt="82c2b72eab7c716b90fafac0a9caf895" src="https://github.com/user-attachments/assets/10819ef0-80a2-4cfe-be81-7daa8918cca1" />
+<img width="1725" height="1140" alt="XLeRobot" src="https://github.com/user-attachments/assets/10819ef0-80a2-4cfe-be81-7daa8918cca1" />
+
+[→ 完全なドキュメント](https://xlerobot.readthedocs.io/en/latest/index.html)（部品表、3D モデル、組み立て、シミュレーション、テレオペガイド）
 
 
-[→ Full Documentation](https://xlerobot.readthedocs.io/en/latest/index.html), with detailed BOM, 3D printing models, assembly guide, simulation, and teleop guide.
+#### 1. マウントヘルパー
+組み立て時の位置合わせを楽にする治具です。
 
-
-#### 1. Mount Helper  
-Print the handy mount jig for easier alignment during assembly.  
-
-[→ View README](Optional/Mount_Helper/README.md)
+[→ README を見る](Optional/Mount_Helper/README.md)
 
 <img src="media/mount_helper.png" alt="Mount Helper" width="150">
 
-#### 2. Overhead Camera Mount 
+#### 2. オーバーヘッドカメラマウント
 
-For bird’s‑eye views in single or bi‑manual setups.  
-(SO100/101)
+単腕・双腕（バイマニュアル）で真上からの視点を取るためのマウントです。
+（SO100/101）
 
-| Webcam  | 32×32 Cam Module |
+| Webカメラ | 32×32 カメラモジュール |
 |:---------------------:|:-------------------:|
-<img src="https://github.com/user-attachments/assets/a652e133-8672-448d-baa0-bdd494a0a515" height="200"> | <img src="media/overhead_cam_two_followers.png" height="200"> 
-| [Instructions](Optional/Overhead_Cam_Mount_Webcam/README.md) | [Instructions](Optional/Overhead_Cam_Mount_32x32_UVC_Module/README.md) 
+<img src="https://github.com/user-attachments/assets/a652e133-8672-448d-baa0-bdd494a0a515" height="200"> | <img src="media/overhead_cam_two_followers.png" height="200">
+| [手順](Optional/Overhead_Cam_Mount_Webcam/README.md) | [手順](Optional/Overhead_Cam_Mount_32x32_UVC_Module/README.md)
 
-#### 3. Base Mounts
+#### 3. ベースマウント
 
-| Raised Leader Base | 4040 Aluminum Profile Mount |
+| リーダー用かさ上げベース | 4040 アルミフレームマウント |
 |:-------------------:|:---------------------------:|
-<img src="media/Raised_Base.jpeg" height="150"> | <img src="media/4040_base_mount.jpg" height="150">  
-[Download STL](Optional/Raised_Base/Raised_Base_Extension.stl) | [Instructions](Optional/4040_Base_Mount/README.md)
+<img src="media/Raised_Base.jpeg" height="150"> | <img src="media/4040_base_mount.jpg" height="150">
+[STL をダウンロード](Optional/Raised_Base/Raised_Base_Extension.stl) | [手順](Optional/4040_Base_Mount/README.md)
 
-#### 4. Tactile Sensing (AnySkin)  
-Add touch sensing to your gripper.  
+#### 4. 触覚センサ（AnySkin）
+グリッパーに触覚を追加できます。
 
-[→ Find on WOWROBO](https://shop.wowrobo.com/products/enhanced-anyskin-premium-crafted-editionwowskin)
+[→ WOWROBO で探す](https://shop.wowrobo.com/products/enhanced-anyskin-premium-crafted-editionwowskin)
 
 <img src="media/tactile_sensor_anyskin.png" alt="AnySkin Sensor" width="150">
 
 
-#### 5. Wrist‑Mount Cameras
+#### 5. 手首カメラマウント
 
-| 32×32 UVC Hex Nut (SO101) | 32×32 UVC Integrated (SO100/101) | 32×32 UVC Plug‑on | RealSense D405 | RealSense D435/D435I | Webcam (Vinmooog) |
+| 32×32 UVC 六角ナット（SO101） | 32×32 UVC 一体型（SO100/101） | 32×32 UVC プラグオン | RealSense D405 | RealSense D435/D435I | Webカメラ（Vinmooog） |
 | --- | --- | --- | --- | --- | --- |
 | <img src="media/UVC_cam_mount_so101.jpg" height="100"> | <img src="media/Wrist_Cam_Mount_32x32_UVC_module_1.jpg" height="100"> | <img src="media/UVC_cam_mount_plugin.jpg" height="100"> | <img src="media/d405_mount.jpg" height="100"> | <img src="media/d435_mount.jpg" height="100"> | <img src="media/cam_mount2.jpg" height="100"> |
-| [Instructions](Optional/SO101_Wrist_Cam_Hex-Nut_Mount_32x32_UVC_Module) | [Instructions](Optional/Wrist_Cam_Mount_32x32_UVC_Module/README.md) | [Instructions](Optional/Wrist_Cam_Plug_Mount_32x32_UVC_Module) | [Instructions](Optional/Wrist_Cam_Mount_RealSense_D405) | [Instructions](Optional/Wrist_Cam_Mount_RealSense_D435) | [Instructions](Optional/Wrist_Cam_Mount_Vinmooog_Webcam) |
+| [手順](Optional/SO101_Wrist_Cam_Hex-Nut_Mount_32x32_UVC_Module) | [手順](Optional/Wrist_Cam_Mount_32x32_UVC_Module/README.md) | [手順](Optional/Wrist_Cam_Plug_Mount_32x32_UVC_Module) | [手順](Optional/Wrist_Cam_Mount_RealSense_D405) | [手順](Optional/Wrist_Cam_Mount_RealSense_D435) | [手順](Optional/Wrist_Cam_Mount_Vinmooog_Webcam) |
 
 
 
-#### 6. Compliant Gripper
-Add some flexibility to your gripper by downloading the compliant gripper parts and printing them using a flexible filament like TPU 95A. 
+#### 6. コンプライアントグリッパー
+TPU 95A などの柔軟フィラメントで印刷し、グリッパーに柔軟性を持たせます。
 
-[→ View README](Optional/Compliant_Gripper/README.md). 
+[→ README を見る](Optional/Compliant_Gripper/README.md)
 
 <img src="https://github.com/user-attachments/assets/26de0b8c-8bd6-4651-867f-1358532e2cc6" width="150">
 
-#### 7. Compliant Gripper (new)
-Printed with TPU 95A for the finger and PLA for the base. 
-Better structure and better grasp (both precision and power). No need to print support for the TPU finger. Requires 2 additional M3 screws, optional 3M gripper tape for higher friction.
-![d2e57534a9e55a3d4dc0d644242cd044](https://github.com/user-attachments/assets/e814ed0a-72ce-43ad-80bf-5f03b7f16b90)
+#### 7. コンプライアントグリッパー（新版）
+指は TPU 95A、ベースは PLA で印刷します。
+構造と把持（精度・力の両方）が改善されています。TPU の指はサポート不要です。M3 ネジが追加で 2 本必要。摩擦を上げたい場合は 3M のグリッパテープも使えます。
+![新版コンプライアントグリッパー](https://github.com/user-attachments/assets/e814ed0a-72ce-43ad-80bf-5f03b7f16b90)
 
-[→ Find on XLeRobot](https://github.com/Vector-Wangel/XLeRobot/tree/main/hardware)
+[→ XLeRobot で探す](https://github.com/Vector-Wangel/XLeRobot/tree/main/hardware)
 </details>
 
-## Debugging Motors
-For debugging, any Windows PC can connect over USB to program the servos and to debug or do tests. To do so download [Feetech Software](https://www.feetechrc.com/software.html). For Ubuntu, you can use [FT_SCServo_Debug_Qt](https://github.com/Kotakku/FT_SCServo_Debug_Qt). Note: This step is not necessary as motors can be configured using the LeRobot Library, but this can be helpful for debugging.
-
+## モーターのデバッグ
+デバッグには、Windows PC を USB 接続してサーボのプログラム・試験ができます。[Feetech ソフトウェア](https://www.feetechrc.com/software.html) をダウンロードしてください。Ubuntu では [FT_SCServo_Debug_Qt](https://github.com/Kotakku/FT_SCServo_Debug_Qt) が使えます。LeRobot ライブラリでもモーター設定はできるので必須ではありませんが、不具合調査には便利です。

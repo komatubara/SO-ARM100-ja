@@ -1,65 +1,64 @@
-# 3D Printing Services
+# 3D プリントサービス
 
-There are different ways to get your parts 3D printed, below are the options and which one to choose. We will add more services once we verify them. If you tried another service please let us know so we can add it here. Additionally SeeedStudio also sells the 3D printed parts only: [SO-ARM100 3D-Printed Enclosure](https://www.seeedstudio.com/SO-ARM100-3D-printed-Enclosure-p-6409.html).  
+部品を 3D プリントしてもらう方法はいくつかあります。検証できたものから順に載せています。別のサービスを試した方は、追加できるよう教えてください。SeeedStudio はプリント済み部品単体も販売しています: [SO-ARM100 3D-Printed Enclosure](https://www.seeedstudio.com/SO-ARM100-3D-printed-Enclosure-p-6409.html)。
 
-- [Europe](#craftcloud3d) (Craftcloud3d) :fr: :de: :uk: :it: :es:
-- [US](#craftcloud3d) (Craftcloud3d) :us:
-- [China](#pcbway) (PCBWay) :cn:
+- [ヨーロッパ](#craftcloud3d)（Craftcloud3d） :fr: :de: :uk: :it: :es:
+- [米国](#craftcloud3d)（Craftcloud3d） :us:
+- [中国](#pcbway)（PCBWay） :cn:
 
 ### [Craftcloud3d](https://craftcloud3d.com)
-**Craftcloud** is a marketplace that routes your order to manufacturing partners in different countries. This makes it flexible, although pricing can vary.
+**Craftcloud** は、注文を各国の製造パートナーへ振り分けるマーケットプレイスです。柔軟に使えますが、価格は変動します。
 
-To get your parts made you can go to [craftcloud3d.com](https://craftcloud3d.com/upload) and upload the individual part files from `STL/SO101/Individual/`. There are 14 distinct parts (9 shared parts plus the leader- and follower-specific parts) — see the [Individual Part Files](README.md#step-4-print-the-parts) table in the README for the full breakdown. A few things to note:
+部品を作るには [craftcloud3d.com](https://craftcloud3d.com/upload) に行き、`STL/SO101/Individual/` の個別部品ファイルをアップロードします。部品は 14 種類（共通 9 点 + リーダー専用 + フォロワー専用）です。内訳は README の [個別部品ファイル](README.md#手順-4-部品を印刷する) を見てください。注意点:
 
-- **Do not** upload `SO101 Assembly.stl` — it is a reference model of the whole arm, not a printable part.
-- Upload only **one** mounting plate, `WaveShare_Mounting_Plate_SO101.stl` **or** `Seeedstudio_Mounting_Plate_SO101.stl`, matching your servo driver board.
-- The 9 shared parts are used on **both** arms, so set their quantity to **2** if you are building a leader + follower pair.
+- `SO101 Assembly.stl` は **アップロードしない** でください。アーム全体の参考モデルで、印刷対象ではありません。
+- マウントプレートは **どちらか一方だけ** です。サーボドライバ基板に合わせて `WaveShare_Mounting_Plate_SO101.stl` **または** `Seeedstudio_Mounting_Plate_SO101.stl` を選んでください。
+- 共通 9 点は **両アームで使う** ので、リーダー + フォロワーを作る場合は数量を **2** にしてください。
 
-Upload them here:
+アップロード画面:
 
 ![Craftcloud3d](./media/3dprinting/craftcloud1.png)
 
-Then click `See Materials & Pricing` button, and on the next page select the material. In our case `PLA+`.
+`See Materials & Pricing` を押し、次のページで材料を選びます。今回は `PLA+` です。
 
 ![Craftcloud3d](./media/3dprinting/craftcloud2.png)
 
-Click `Select Material` button and you then have to select the finish. Here choose:
-- `Finish` = Standard 
-- `Infill` = 20% (If you don't see the infill options, wait until the price is calculated)
+`Select Material` を押し、仕上げを選びます。
+- `Finish` = Standard
+- `Infill` = 20%（インフィル選択肢が見えない場合は、価格計算が終わるまで待つ）
 
-And click `Select Finish` to move to the next page.
+`Select Finish` で次へ進みます。
 
 ![Craftcloud3d](./media/3dprinting/craftcloud3.png)
 
-Next choose the color, and click `See offers`.
+色を選び、`See offers` をクリックします。
 
 ![Craftcloud3d](./media/3dprinting/craftcloud4.png)
 
-Finally choose your manufacturer. You can choose manufacturer based on price, delivery date and production location.
+最後に製造元を選びます。価格・納期・生産地で比較できます。
 
 ![Craftcloud3d](./media/3dprinting/craftcloud5.png)
 
-And that's it, once the parts arrive you are ready to assemble your SO-101!
+これで完了です。部品が届いたら SO-101 の組み立てに進めます。
 
 ### [PCBWay](https://www.pcbway.com)
-**PCBWay** ships worldwide but outside of China import taxes should be paid. This makes it more expensive to order here.
+**PCBWay** は世界発送できますが、中国以外では輸入税がかかるため、結果的に高くなりがちです。
 
-To get your parts made you can go to [pcbway.com](https://www.pcbway.com/rapid-prototyping/manufacture/?type=2) and upload these two all-in-one plate files `STL/SO101/Leader/Ender_Leader_SO101.stl` and `STL/SO101/Follower/Ender_Follower_SO101.stl` here:
+部品を作るには [pcbway.com](https://www.pcbway.com/rapid-prototyping/manufacture/?type=2) に行き、一体型プレートファイル `STL/SO101/Leader/Ender_Leader_SO101.stl` と `STL/SO101/Follower/Ender_Follower_SO101.stl` の 2 つをアップロードします。
 
 ![PCBWay](./media/3dprinting/pcb_way.png)
 
-Then select the following settings:
-- `Quantity` = 1 for both (Or more if you need more).
+次の設定にします。
+- `Quantity` = 両方とも 1（必要なら増やす）
 - `Design Units` = mm
-- `Material` -> Custom material -> and type `PLA+`
-- `Product Desc` -> DIY Entertainment -> Robot components
-- `Other special requests` =  'FDM, 20% infill' (And you can specify the color you want)
+- `Material` → Custom material → `PLA+` と入力
+- `Product Desc` → DIY Entertainment → Robot components
+- `Other special requests` = `FDM, 20% infill`（希望色もここに書けます）
 
-This tells PCBWay we want to use [FDM](https://www.hubs.com/knowledge-base/what-is-fdm-3d-printing/) 3D printing process with 20% infill. You don't need to change the rest of the options. And once you verified everything you can click `Submit`.
+これで [FDM](https://www.hubs.com/knowledge-base/what-is-fdm-3d-printing/) の 3D プリント、インフィル 20% を指定したことになります。他の項目はそのままで構いません。確認したら `Submit` をクリックします。
 
 ![PCBWay](./media/3dprinting/pcb_way2.png)
 
-Now the parts will be verified and you will be given a final quotation with shipping costs. The pricing can vary but our experience was that the total for both a leader and a follower was around ~95,- dollars. You can have contact with PCBWay via their online portal.
+検証後、送料込みの最終見積が出ます。価格は変動しますが、リーダー + フォロワーでおよそ 95 ドル前後だった、というのが原文の経験です。連絡は PCBWay のオンラインポータルからできます。
 
 ![PCBWay](./media/3dprinting/pcb_way3.png)
-

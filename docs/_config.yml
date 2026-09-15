@@ -1,0 +1,45 @@
+title: SO-101 日本語ガイド
+description: Standard Open SO-100 / SO-101 ロボットアームの非公式日本語解説
+url: https://komatubara.github.io
+baseurl: /SO-ARM100-ja
+lang: ja
+timezone: Asia/Tokyo
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+permalink: pretty
+exclude:
+  - Gemfile
+  - Gemfile.lock
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+img_origin: https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/main
+github_ja: https://github.com/komatubara/SO-ARM100-ja
+github_origin: https://github.com/TheRobotStudio/SO-ARM100
+hf_so101: https://huggingface.co/docs/lerobot/so101
+nav:
+  - title: はじめに
+    url: /
+  - title: このロボットとは
+    url: /overview/
+  - title: 部品を揃える
+    url: /parts/
+  - title: 3Dプリント
+    url: /printing/
+  - title: 組み立て
+    url: /assembly/
+  - title: ソフトウェア
+    url: /software/
+  - title: キャリブレーション
+    url: /calibration/
+  - title: オプション部品
+    url: /optional/
+  - title: シミュレーション
+    url: /simulation/
+  - title: 困ったとき
+    url: /troubleshooting/

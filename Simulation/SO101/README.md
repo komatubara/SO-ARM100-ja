@@ -1,35 +1,35 @@
-# SO101 Robot - URDF and MuJoCo Description
+# SO101 ロボット — URDF と MuJoCo の説明
 
-This repository contains the URDF and MuJoCo (MJCF) files for the SO101 robot.
+このディレクトリには、SO101 ロボットの URDF と MuJoCo（MJCF）ファイルがあります。
 
-## Overview
+## 概要
 
-- The robot model files were generated using the [onshape-to-robot](https://github.com/Rhoban/onshape-to-robot) plugin from a CAD model designed in Onshape.
-- The generated URDFs were modified to allow meshes with relative paths instead of `package://...`.
-- Base collision meshes were removed due to problematic collision behavior during simulation and planning.
+- ロボットモデルは、Onshape で設計した CAD から [onshape-to-robot](https://github.com/Rhoban/onshape-to-robot) プラグインで生成しています。
+- 生成された URDF は、`package://...` ではなく相対パスのメッシュを使えるよう修正しています。
+- ベースの衝突メッシュは、シミュレーションと計画で問題が起きやすかったため削除しています。
 
-## Calibration Methods
+## キャリブレーション方式
 
-The MuJoCo file `scene.xml` supports two differenly calibrated SO101 robot files:
+MuJoCo の `scene.xml` は、キャリブレーションの違う 2 種類の SO101 ファイルを切り替えられます。
 
-- **New Calibration (Default)**: Each joint's virtual zero is set to the **middle** of its joint range. Use -> `so101_new_calib.xml`. 
-- **Old Calibration**: Each joint's virtual zero is set to the configuration where the robot is **fully extended horizontally**. Use -> `so101_old_calib.xml`.
+- **新キャリブレーション（デフォルト）**: 各関節の仮想ゼロを、可動範囲の **中央** に置く。使うファイルは `so101_new_calib.xml`。
+- **旧キャリブレーション**: 各関節の仮想ゼロを、ロボットが **水平に真っすぐ伸びた姿勢** に置く。使うファイルは `so101_old_calib.xml`。
 
-To switch between calibration methods, modify the included robot file in `scene.xml`.
+切り替えるときは、`scene.xml` で読み込むロボットファイルを変更してください。
 
-## Motor Parameters
+## モーターパラメータ
 
-Motor properties for the STS3215 motors used in the robot are adapted from the [Open Duck Mini project](https://github.com/apirrone/Open_Duck_Mini).
+ロボットに使う STS3215 のモーター特性は、[Open Duck Mini プロジェクト](https://github.com/apirrone/Open_Duck_Mini) の値を基にしています。
 
-## Gripper Note
+## グリッパーについての注意
 
-In LeRobot, the gripper is represented as a **linear joint**, where:
+LeRobot ではグリッパーは **直動関節** として表され、次の対応です。
 
-* `0` = fully closed
-* `100` = fully open
+* `0` = 完全に閉じた状態
+* `100` = 完全に開いた状態
 
-This mapping is **not yet reflected** in the current URDF and MuJoCo files. 
+この対応は、現在の URDF / MuJoCo ファイルには **まだ反映されていません**。
 
 ---
 
-Feel free to open an issue or contribute improvements!
+改善の Issue や貢献を歓迎します。

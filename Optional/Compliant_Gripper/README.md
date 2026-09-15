@@ -1,19 +1,21 @@
-# Compliant Gripper Guide for the SO-101 Arm
+# SO-101 アーム用コンプライアントグリッパーガイド
 
 <img src="https://github.com/user-attachments/assets/26de0b8c-8bd6-4651-867f-1358532e2cc6" width="500">
 
-The compliant gripper is a modification of the original rigid gripper that is printed out of a flexible material (TPU). It uses a hollowed-out design with internal ribs to flexibly conform to the objects it grasps, thereby reducing the contact force exerted on the object. This gripper is ideal for objects with difficult geometries or fragile components (e.g., fruit) as it reduces the control precision required to safely manipulate objects. 
+コンプライアントグリッパーは、元の剛体グリッパーを柔軟材料（TPU）で印刷する改造です。内部リブ付きの中空構造で、つかむ対象の形に沿ってたわみ、接触力を下げます。形が難しい物や壊れやすい物（果物など）向きで、安全に扱うために必要な制御精度も下がります。
 
-## Printing Instructions
-The demo compliant gripper was printed with a Bambu Lab printer using a flexible thermoplastic polyurethane (TPU) filament with Shore hardness of 95A. Printer settings included 20% and support generation. The supports were manually removed with flush cutters after printing concluded. 
+## 印刷手順
 
-Not all printers are capable of printing with flexible filaments like TPU. Some printers may require modifications like upgraded printer heads. Printing with TPU may result in longer print times and often requires additional post-processing due to the difficulties in removing the support material. 
+デモ用グリッパーは、Bambu Lab プリンタでショア硬度 95A の熱可塑性ポリウレタン（TPU）フィラメントを使い、インフィル 20% とサポート生成で印刷しました。印刷後、サポートはニッパーで手作業で外しています。
 
+TPU のような柔軟フィラメントに対応していないプリンタもあります。ヘッドの換装などが必要な機種もあります。TPU は印刷時間が長くなりやすく、サポートが取りにくいため後処理も増えます。
 
-## Installation Instructions (SO-101)
-No modifications to the robot assembly process or installation are required with the compliant gripper. The external geometry is identical to the original gripper, outside of the removal of some holes and the addition of the cavities/ ribs.
+## 取り付け手順（SO-101）
 
-Simply print [Compliant_Moving_Jaw_SO101.stl](stl/Compliant_Moving_Jaw_SO101.stl) and [Compliant_Wrist_Roll_Follower_SO101.stl](stl/Compliant_Wrist_Roll_Follower_SO101.stl) using TPU 95A and install as normal. 
+コンプライアントグリッパーでは、ロボットの組み立て手順や取り付け方法を変える必要はありません。外形は元のグリッパーと同じで、一部の穴をなくし、空洞とリブを足した程度です。
 
-## Further details
-This design was created during the June 2025 Hugging Face LeRobot Hackathon by Zach Tabor and Caitlin Freeman from Memphis, TN. The design is loosely inspired from a common compliant gripper design that relies on the Fin Ray Effect&reg;, a concept that was popularized by Festo and used in their compliant grippers. 
+[Compliant_Moving_Jaw_SO101.stl](stl/Compliant_Moving_Jaw_SO101.stl) と [Compliant_Wrist_Roll_Follower_SO101.stl](stl/Compliant_Wrist_Roll_Follower_SO101.stl) を TPU 95A で印刷し、いつもどおり取り付けてください。
+
+## 補足
+
+この設計は、2025 年 6 月の Hugging Face LeRobot Hackathon で、メンフィス（テネシー州）の Zach Tabor と Caitlin Freeman が作りました。Festo のコンプライアントグリッパーで知られる Fin Ray Effect® にゆるく着想を得ています。

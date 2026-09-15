@@ -1,9 +1,9 @@
-# Helper piece to mount your so100
+# SO100 組み立て用ヘルパー部品
 
-Inserting the rectangular hollow pieces can be quite difficult.
+四角い中空部品を差し込むのは、かなり力が要ることがあります。
 
-To make it easier to assemble, we propose this helper piece that will allow you to push with ease.
+組み立てを楽にするため、押し込みやすくするヘルパー部品を用意しています。
 
-Here's a short video of how to use it.
+使い方の短い動画です。
 
 <video src="https://github.com/user-attachments/assets/e1095e7a-b974-4ff0-b3d9-2820359dface"></video>

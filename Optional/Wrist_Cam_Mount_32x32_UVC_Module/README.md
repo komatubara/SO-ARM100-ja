@@ -1,56 +1,53 @@
-# Wrist Camera Integrated/One-Piece Installation Guide for SO-100/SO-101
+# SO-100/SO-101 用手首カメラ一体型取り付けガイド
 
-<img width="250" src="../../media/Wrist_Cam_Mount_32x32_UVC_module_1.jpg" /> 
+<img width="250" src="../../media/Wrist_Cam_Mount_32x32_UVC_module_1.jpg" />
 <img width="250" src="../../media/Wrist_Cam_Mount_32x32_UVC_module_2.jpg" />
 
-## Overview
-This guide provides step-by-step instructions for installing a **Wrist Camera** on the SO-100/SO-101 robots using a **Camera Module** and a 3D-printed **Jaw Replacement Part**.
+## 概要
+このガイドでは、**カメラモジュール** と 3D プリントした **ジョー置き換え部品** を使い、SO-100 / SO-101 に **手首カメラ** を取り付ける手順を説明します。
 
-## Comparison to Main Design
-#### Advantages:
-- smaller
-- fewer parts
-- no additional screws/hardware needed to attach camera
+## メイン設計との比較
+#### 利点:
+- 小さい
+- 部品が少ない
+- カメラ取り付けに追加のネジ／金具が不要
 
-#### Disdvantages:
-- requires removal/replacement of existing **Wrist Roll** vs an add-on
+#### 欠点:
+- 後付けではなく、既存の **Wrist Roll** を外して置き換える必要がある
 
-## Required Components
-### Hardware:
-- **USB Camera Module** (1) - this is the [recommended model](https://www.amazon.com/innomaker-Computer-Raspberry-Support-Windows/dp/B0CNCSFQC1/ref=pd_lpo_d_sccl_3/132-7372155-9780230?pd_rd_w=eYz4L&content-id=amzn1.sym.4c8c52db-06f8-4e42-8e56-912796f2ea6c&pf_rd_p=4c8c52db-06f8-4e42-8e56-912796f2ea6c&pf_rd_r=XC3EXZRSSXKDB1G0Z5D7&pd_rd_wg=1wTpn&pd_rd_r=932b1976-9ac7-4cef-9774-f0f9c3acb804&pd_rd_i=B0CNCSFQC1&psc=1), but any 32mm x 32mm USB camera module with min 720p / 30 fps spec will likely work
-- 3D-printed Wrist Roll Replacement ([SO-100](/Optional/Wrist_Cam_Mount_32x32_UVC_Module/stl/Wrist_Cam_Mount_32x32_UVC_Module_SO100.stl), [SO-101](/Optional/Wrist_Cam_Mount_32x32_UVC_Module/stl/Wrist_Cam_Mount_32x32_UVC_Module_SO101.stl)) (1)
-- **M2 Screws** (4) - these are the smaller screws that came with your Feetech servos.
+## 必要な部品
+### ハードウェア:
+- **USB カメラモジュール**（1）— [推奨モデル](https://www.amazon.com/innomaker-Computer-Raspberry-Support-Windows/dp/B0CNCSFQC1/ref=pd_lpo_d_sccl_3/132-7372155-9780230?pd_rd_w=eYz4L&content-id=amzn1.sym.4c8c52db-06f8-4e42-8e56-912796f2ea6c&pf_rd_p=4c8c52db-06f8-4e42-8e56-912796f2ea6c&pf_rd_r=XC3EXZRSSXKDB1G0Z5D7&pd_rd_wg=1wTpn&pd_rd_r=932b1976-9ac7-4cef-9774-f0f9c3acb804&pd_rd_i=B0CNCSFQC1&psc=1)。32mm × 32mm、最低 720p / 30fps の USB カメラモジュールなら他でも使えることが多いです
+- 3D プリントした Wrist Roll 置き換え部品（[SO-100](/Optional/Wrist_Cam_Mount_32x32_UVC_Module/stl/Wrist_Cam_Mount_32x32_UVC_Module_SO100.stl)、[SO-101](/Optional/Wrist_Cam_Mount_32x32_UVC_Module/stl/Wrist_Cam_Mount_32x32_UVC_Module_SO101.stl)）（1）
+- **M2 ネジ**（4）— Feetech サーボに付属する小さい方のネジです。
 
+<img height="200" alt="カメラモジュール例" src="https://github.com/user-attachments/assets/18099e1d-754c-4877-871f-9113a0dff062" />
 
-<img height="200" alt="Screenshot 2025-03-04 at 7 43 33 PM" src="https://github.com/user-attachments/assets/18099e1d-754c-4877-871f-9113a0dff062" />
+## 組み立て手順
+### 手順 1: [Wrist Roll](../../STL/SO101/Individual/Wrist_Roll_Follower_SO101.stl) を新しい部品に置き換える
+1. アームに [Moving Jaw](../../STL/SO101/Individual/Moving_Jaw_SO101.stl) が付いている場合は、付けたままにします。既存 Wrist Roll からグリッパーサーボを外す手順:
+ - サーボを Wrist Roll に固定している前後の **M3 ネジ** 6 本をすべて外す
+ - モーターをそっと引き抜く
+ - Wrist Roll を次のサーボに固定している残りの **M3 ネジ** 4 本を外す
 
-## Assembly Instructions
-### Step 1: Replace the [Wrist Roll](../../STL/SO101/Individual/Wrist_Roll_Follower_SO101.stl) with our new one
-1. If a [Moving Jaw](../../STL/SO101/Individual/Moving_Jaw_SO101.stl) is already installed on the arm, leave it attached. Remove the gripper servo from the existing Wrist Roll piece by:
- - unscrewing all 6 of **M3 Screws** from the front and back of the servo which attach it to the Wrist Roll piece 
- - gently pulling the motor out
- - unscrew the remaining 4 **M3 Screws** holding the Wrist Roll piece to the next servo
-   
-2. 3D print the **Wrist Roll Replacement**.
+2. **Wrist Roll 置き換え部品** を 3D プリントする。
 
-3. Attach the **Wrist Roll Replacement** by doing the reverse of (1).
+3. (1) の逆手順で **Wrist Roll 置き換え部品** を取り付ける。
 
-
-### Step 2: Install the Camera
-1. Take out the **Camera Module**.
-2. Align the 4 holes of the **Camera Module** with the **Moving Jaw Replacement**, and attach using 4 **M2 Screws**.
+### 手順 2: カメラを取り付ける
+1. **カメラモジュール** を取り出す。
+2. **カメラモジュール** の 4 穴を置き換え部品に合わせ、**M2 ネジ** 4 本で固定する。
 
 <img height="300" src="https://github.com/user-attachments/assets/ea5af652-9311-44c7-8ae8-525f42cb4703" />
 
+### 手順 3: ソフトウェア設定とフォーカス調整
+1. ソフトウェアで解像度と FPS を設定する。
+- **注意**: カメラの最大解像度が高くても、解像度は *640 × 480*、FPS は *30* が無難です。多くのモデルは低解像度で学習し、高すぎるとデータが膨らむだけです。
+2. アームの電源を入れ、取り付けたカメラの映像を確認する（Mac なら *QuickTime* → *新規ムービー収録* でも見られます）。
+3. **重要** — フォーカスは手動で、最初はかなりボケて見えます。映像がはっきりするまでレンズを時計回り／反時計回りに回して調整してください。
 
-### Step 3: Configure Software and Adjust Focus
-1. In your software, set your resolution and FPS. 
-- **Note**: You will likely want to set your resolution to *640 x 480* and FPS to *30* even if the camera module's max resolution/frame rate is higher, as most models work with lower resolutions and any higher will just be data bloat.
-2. Turn on your arm.  Look at the video feed from your newly installed camera (On Mac, you can also use *QuickTime*->*New Movie Recording* to see this feed).  
-3. **Important** - The focus on the camera is manual and will look very blurry initially. Adjust the focus by twisting the lens counterclockwise or clockwise until the video feed is clear.
+## 謝辞
 
-## Acknowledgements
-
-Design & Testing
+設計とテスト
 - Conor McGartholl
 - Philip Fung
