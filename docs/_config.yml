@@ -31,6 +31,8 @@ nav:
     url: /parts/
   - title: 3Dプリント
     url: /printing/
+  - title: サーボの準備
+    url: /servos/
   - title: 組み立て（本編）
     url: /assembly/
   - title: LeRobot 導入

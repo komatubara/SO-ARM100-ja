@@ -31,6 +31,11 @@ lead: SO-101 は、自分で印刷・組み立てて、Hugging Face の LeRobot 
     <span>推奨設定、ゲージでの精度確認、印刷サービス。</span>
     <em>印刷する →</em>
   </a>
+  <a class="card" href="{{ '/servos/' | relative_url }}">
+    <strong>サーボの準備</strong>
+    <span>箱を開けてから。配線、電源、出荷時 ID、ホーン。</span>
+    <em>触る前に →</em>
+  </a>
   <a class="card" href="{{ '/assembly/' | relative_url }}">
     <strong>組み立て（本編）</strong>
     <span>Hugging Face 公式ガイドの日本語訳。動画つきで関節ごとに組む。</span>
@@ -66,6 +71,7 @@ lead: SO-101 は、自分で印刷・組み立てて、Hugging Face の LeRobot 
 
 - [部品表と日本からの購入]({{ '/parts/' | relative_url }})
 - [印刷設定と外注]({{ '/printing/' | relative_url }})
+- [サーボの準備（箱を開けてから）]({{ '/servos/' | relative_url }})
 - [組み立て（Hugging Face チュートリアル日本語訳・動画つき）]({{ '/assembly/' | relative_url }})
 - [LeRobot 導入]({{ '/software/' | relative_url }})
 - [データ収集と学習]({{ '/train/' | relative_url }})
